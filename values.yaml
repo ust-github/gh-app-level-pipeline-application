@@ -1,0 +1,47 @@
+gh-app-level-backend-module-new-chart:
+  image:
+    repository: artifactory.dagility.com/docker/gh-app-level-backend-module-new
+    tag: latest
+    pullPolicy: Always
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: nginx-internal
+    hosts:
+    - host: gh-app-level-backend-module-new-default.dagility.com
+      paths:
+      - /
+  serviceAccount:
+    create: false
+
+gh-app-level-backend-chart:
+  image:
+    repository: artifactory.dagility.com/docker/gh-app-level-backend
+    tag: latest
+    pullPolicy: Always
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: nginx-internal
+    hosts:
+    - host: gh-app-level-backend-default.dagility.com
+      paths:
+      - /
+  serviceAccount:
+    create: false
+
+gh-app-level-frontend-chart:
+  image:
+    repository: artifactory.dagility.com/docker/gh-app-level-frontend
+    tag: latest
+    pullPolicy: Always
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: nginx-internal
+    hosts:
+    - host: gh-app-level-frontend-default.dagility.com
+      paths:
+      - /
+  serviceAccount:
+    create: false
