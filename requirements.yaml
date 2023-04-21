@@ -1,4 +1,7 @@
 dependencies:
+  - name: gh-app-level-backend-module-new-new-chart
+    repository: https://artifactory.dagility.com/artifactory/helm/
+    version: 0.1.0
   - name: gh-app-level-backend-module-new-chart
     repository: https://artifactory.dagility.com/artifactory/helm/
     version: 0.1.0
